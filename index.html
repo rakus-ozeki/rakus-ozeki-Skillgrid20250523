@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研修 Day1：KGI・KPIの基礎と「自分ごと化」する設定の勘所</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Meiryo, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF; /* 明るい背景色 */
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            /* box-shadow: 0 2px 10px rgba(0,0,0,0.1); */
+        }
+        .slide {
+            padding: 30px;
+            margin-bottom: 25px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            background-color: #f9f9f9; /* 各スライドの背景を少し変える */
+        }
+        .slide h1, .slide h2, .slide h3 {
+            color: #464646; /* ブランドカラーに近い濃いグレー */
+        }
+        .slide h1 { /* 表紙タイトル */
+            font-size: 2.2em;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #464646; /* ブランドカラー */
+        }
+        .slide .subtitle { /* 表紙サブタイトル */
+            font-size: 1.3em;
+            text-align: center;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .slide .slide-header { /* 各スライドのヘッダータイトル */
+            font-size: 1.8em;
+            border-bottom: 2px solid #F08300; /* アクセントカラー */
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+         .slide .slide-subheader {
+            font-size: 1.2em;
+            color: #F08300; /* アクセントカラー */
+            margin-top: -15px;
+            margin-bottom: 20px;
+        }
+        ul, ol {
+            padding-left: 30px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .icon {
+            margin-right: 8px;
+            color: #F08300; /* アクセントカラー */
+        }
+        .qr-code-placeholder {
+            display: block;
+            width: 150px;
+            height: 150px;
+            background-color: #ddd;
+            margin: 20px auto;
+            text-align: center;
+            line-height: 150px;
+            color: #777;
+            border: 1px dashed #aaa;
+        }
+        .two-column-layout {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .two-column-layout > div {
+            flex: 1;
+            background-color: #FFF6E9; /* 背景色 */
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .two-column-layout h3 {
+            margin-top: 0;
+            color: #464646;
+            border-bottom: 1px solid #F08300;
+            padding-bottom: 5px;
+        }
+        .pyramid-chart-placeholder, .tree-chart-placeholder, .comparison-chart-placeholder {
+            width: 100%;
+            min-height: 200px;
+            background-color: #e9e9e9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #777;
+            border: 1px dashed #aaa;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        .smart-box {
+            background-color: #FFF;
+            padding: 15px;
+            border-left: 5px solid #F08300; /* アクセントカラー */
+            margin-bottom: 15px;
+            border-radius: 0 5px 5px 0;
+        }
+        .smart-box strong {
+            color: #F08300; /* アクセントカラー */
+            font-size: 1.2em;
+        }
+        .note {
+            font-size: 0.9em;
+            color: #555;
+            background-color: #FFF6E9; /* 背景色 */
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 3px solid #F08300; /* アクセントカラー */
+        }
+        .highlight {
+            color: #F08300; /* アクセントカラー */
+            font-weight: bold;
+        }
+        .center-text {
+            text-align: center;
+        }
+        .footer-info {
+            text-align: right;
+            font-size: 0.8em;
+            color: #777;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="slide">
+            <h1>カスタマーマーケティングチーム向け<br>KGI・KPI設定およびデータ活用力向上研修</h1>
+            <p class="subtitle">Day1：KGI・KPIの基礎と「自分ごと化」する設定の勘所</p>
+            <p class="center-text">[研修実施日]</p>
+            <p class="center-text" style="margin-top: 30px; font-size: 0.9em;">株式会社ラクス カスタマーマーケティングチーム様</p>
+            <div class="footer-info">研修資料 Ver.1.0</div>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-header">本日の進め方とゴール (Day1)</h2>
+            <h3><span class="icon">⏱️</span>タイムスケジュール</h3>
+            <ul>
+                <li>15分: オープニング＆アイスブレイク</li>
+                <li>30分: 講義1：なぜKGI・KPIが重要か？</li>
+                <li>35分: ワーク1：私たちのKGI・KPIを洗い出す</li>
+                <li>10分: ラップアップ＆Day1のまとめ</li>
+            </ul>
+            <h3><span class="icon">🎯</span>本日のゴール</h3>
+            <ul>
+                <li>KGI・KPIの重要性と基本的な考え方を理解する。</li>
+                <li>自業務におけるKGI・KPI設定の第一歩を踏み出す。</li>
+                <li>チームメンバーとの共通認識の土台を作る。</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-header">講師紹介</h2>
+            <p><strong>講師名：</strong> [講師名]</p>
+            <p><strong>所属・役職：</strong> [講師の所属・役職]</p>
+            <p><strong>簡単な経歴・実績：</strong> [KGI・KPI設定、データ活用、カスタマーマーケティング関連などの経歴を記載]</p>
+            <p><strong>本日の研修にかける想い：</strong> [一言コメントを記載]</p>
+            </div>
+
+        <div class="slide">
+            <h2 class="slide-header">アイスブレイク：私たちの「今」を共有しよう！</h2>
+            <p>本研修の前に、書籍『データドリブンマーケティングがうまくいく仕組み』をお読みいただき、事前課題シートにご記入いただきました。ありがとうございます！</p>
+            <p>まずは、皆さんが感じていること、学びたいことを匿名で共有し、研修へのウォーミングアップをしましょう。</p>
+            <p><span class="icon">💻</span>お手元のスマートフォンやPCから、以下のURLまたはQRコードにアクセスしてください。</p>
+            <div class="qr-code-placeholder">QRコード</div>
+            <p class="center-text">URL: [MentimeterやSlidoなどのURLを記載]</p>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-header">アイスブレイク：皆さんの声（リアルタイム表示）</h2>
+            <p class="note">このスライドは、Webツールの画面をプロジェクターで投影しながら、講師がファシリテートします。</p>
+            <p><strong>質問1 (Webツールで設定):</strong> 「書籍を読んで『特に印象に残った』または『ハッとした』キーワードは何ですか？」（ワードクラウドで表示推奨）</p>
+            <p><strong>質問2 (Webツールで設定):</strong> 「今日の研修で『特に解決したい・学びたい』業務上の課題は何ですか？」（自由記述・箇条書きで複数表示推奨）</p>
+            <p><em>講師コメント例：「『LTV』という言葉が多く出ていますね」「『KPI設定の具体策』を求めている方が多いようです。本日の研修でしっかりカバーしていきます！」</em></p>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-header">なぜKGI・KPIが重要か？</h2>
+            <p class="slide-subheader">～カスタマーマーケティングにおける羅針盤～</p>
+            </div>
+
+        <div class="slide">
+            <h2 class="slide-header">KGI・KPIとは？ <span style="font-size:0.7em; color:#777;">(書籍のおさらい)</span></h2>
+            <div class="two-column-layout">
+                <div>
+                    <h3><span class="icon">🎯</span>KGI (Key Goal Indicator / 重要目標達成指標)</h3>
+                    <p><strong>定義:</strong> 最終的な目標（ゴール）が達成されているかを計測する指標。</p>
+                    <p><strong>例:</strong> 売上高、利益率、市場シェア、<span class="highlight">LTV (顧客生涯価値)</span></p>
+                    <p><strong>一言:</strong> 「私たちが目指す山の頂上」</p>
+                </div>
+                <div>
+                    <h3><span class="icon">📜</span>KPI (Key Performance Indicator / 重要業績評価指標)</h3>
+                    <p><strong>定義:</strong> KGI達成に向けた各プロセスが適切に実行されているかを計測・評価するための中間指標。</p>
+                    <p><strong>例:</strong> Webサイトアクセス数、コンバージョン率、<span class="highlight">オンボーディング完了率、アクティブユーザー率</span></p>
+                    <p><strong>一言:</strong> 「頂上へ続く道のりを示す道しるべ」</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-header">事業目標とKGI・KPIの繋がり - 全体像を掴む</h2>
+            <div class="pyramid-chart-placeholder">
+                <strong>図解エリア：ピラミッド構造またはツリー構造</strong><br>
+                頂点: 会社のビジョン / 事業全体の目標<br>
+                ↓<br>
+                事業部KGI (例: カスタマーサクセス部門KGI → 年間解約率●%未満)<br>
+                ↓<br>
+                チームKGI / 主要KPI (例: オンボーディングチームKPI → 初回ログイン後7日以内の主要機能利用率●%)<br>
+                ↓<br>
+                個人KPI / アクション指標 (例: オンボーディングコール実施件数)
+            </div>
+            <p class="note"><strong>ポイント：</strong> 「上位の目標からブレイクダウンして設定される」「全てのKPIはKGI達成に貢献する」</p>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-header">カスタマーマーケティングのKGI例 - 何を目指すか？</h2>
+            <ul>
+                <li><span class="icon">👑</span><strong>LTV (顧客生涯価値) / CLV:</strong> 顧客が取引期間全体を通じて企業にもたらす総利益。カスタマーサクセスの究極目標の一つ。</li>
+                <li><span class="icon">📉</span><strong>チャーンレート (解約率):</strong> 一定期間にどれだけの顧客がサービス利用を停止したかの割合。</li>
+                <li><span class="icon">😊</span><strong>NPS® (ネットプロモータースコア):</strong> 顧客ロイヤルティを測る指標。「推奨者」-「批判者」の割合。</li>
+                <li><span class="icon">🔄</span><strong>リテンションレート (顧客維持率):</strong> 既存顧客が継続してサービスを利用している割合。</li>
+                <li><span class="icon">💰</span><strong>アップセル/クロスセル金額・件数:</strong> 既存顧客への追加販売による売上。</li>
+            </ul>
+            <p class="note">これらはあくまで一例です。事業フェーズや戦略によって最適なKGIは異なります。</p>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-header">カスタマーマーケティングのKPI例 - KGI達成への道筋</h2>
+            <h3>オンボーディング関連：</h3>
+            <ul>
+                <li>オンボーディング完了率</li>
+                <li>初期設定完了までの平均日数</li>
+                <li>初回ログイン後●日以内の主要機能利用率</li>
+            </ul>
+            <h3>アダプション (利用定着) 関連：</h3>
+            <ul>
+                <li>アクティブユーザー率 (MAU/WAU/DAU)</li>
+                <li>主要機能の利用頻度・利用率</li>
+                <li>セッション時間</li>
+            </ul>
+            <h3>エンゲージメント関連：</h3>
+            <ul>
+                <li>コミュニティ参加率・投稿数</li>
+                <li>セミナー/ウェビナー参加率</li>
+                <li>CSAT (顧客満足度スコア)</li>
+            </ul>
+            <h3>エクスパンション (顧客価値向上) 関連：</h3>
+            <ul>
+                <li>アップセル/クロスセルのリード数・商談化率</li>
+                <li>特定プランへのアップグレード率</li>
+            </ul>
+            <p class="note">KPIはKGI達成への具体的な行動を促す「道しるべ」です。</p>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-header">先行指標と遅行指標 - カスタマーサクセスの鍵</h2>
+            <div class="two-column-layout">
+                <div>
+                    <h3><span class="icon">🏁</span>遅行指標 (Lagging Indicator)</h3>
+                    <p>結果として現れる指標。過去の活動の成果。</p>
+                    <p><strong>例:</strong> 売上、利益、<span class="highlight">解約率、LTV</span></p>
+                    <p><strong>特徴:</strong> 把握はしやすいが、直接コントロールしにくい。</p>
+                </div>
+                <div>
+                    <h3><span class="icon">🚀</span>先行指標 (Leading Indicator)</h3>
+                    <p>遅行指標に先行して変化する指標。未来の結果を予測する。</p>
+                    <p><strong>例:</strong> <span class="highlight">アクティブユーザー数、機能利用率、エンゲージメントスコア、オンボーディング完了率</span></p>
+                    <p><strong>特徴:</strong> 直接的なアクションで改善しやすく、未来の結果を変える力がある。</p>
+                </div>
+            </div>
+            <div class="comparison-chart-placeholder" style="margin-top: 20px;">
+                <strong>図解エリア：</strong> 遅行指標「結果」 vs 先行指標「原因/活動」のシンプルな対比図
+            </div>
+            <p class="note" style="margin-top: 15px;"><strong>カスタマーマーケティングのポイント：</strong> 「解約率（遅行指標）が悪化する前に、先行指標の変化を捉え、先手を打つことが重要！」</p>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-header">なぜKPIは行動に繋がらない？ - よくある落とし穴</h2>
+            <ul>
+                <li><span class="icon">❓</span><strong>目的が不明確:</strong> KGIとの繋がりが見えず、何のためにやっているかわからない。</li>
+                <li><span class="icon">✖️</span><strong>測定できない/しにくい:</strong> データが取れない、または集計に手間がかかりすぎる。</li>
+                <li><span class="icon">👤</span><strong>担当者がいない/曖昧:</strong> 誰がそのKPIに責任を持つのか決まっていない。</li>
+                <li><span class="icon">🚫</span><strong>アクションに繋がらない:</strong> KPIが上下しても、具体的に何をすれば良いかわからない。 <span class="highlight">[*]</span></li>
+                <li><span class="icon">📚</span><strong>KPIが多すぎる:</strong> 何を優先すべきかわからなくなる。</li>
+                <li><span class="icon">🗓️</span><strong>見直しがされない:</strong> 設定しっぱなしで、状況変化に対応できていない。</li>
+            </ul>
+            <p><em>皆さんのチームでは、当てはまるものはありますか？</em></p>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-header">良いKPIの条件 - SMARTの法則</h2>
+            <div class="smart-box">
+                <p><strong>S - Specific (具体的、明確であるか):</strong> 誰が読んでも同じ解釈ができるか？</p>
+                <p><em>例：「顧客満足度を上げる」→「●●機能利用者のCSATを前期比5ポイント向上させる」</em></p>
+            </div>
+            <div class="smart-box">
+                <p><strong>M - Measurable (測定可能であるか):</strong> 定量的に測定できるか？進捗がわかるか？</p>
+                <p><em>例：「多くの人に使ってもらう」→「MAUを現在の1000から1200に増やす」</em></p>
+            </div>
+            <div class="smart-box">
+                <p><strong>A - Achievable (達成可能であるか):</strong> 現実的に達成できる範囲か？現実離れしていないか？</p>
+                <p><em>例：「解約率を0%にする」→「解約率を現在の3%から2.5%に低減する」</em></p>
+            </div>
+            <div class="smart-box">
+                <p><strong>R - Relevant (関連性があるか):</strong> KGI達成や事業目標に貢献するか？</p>
+                <p><em>例：(カスタマーサクセスチームが)「新規リード獲得数10%増」(←関連性が薄い可能性)</em></p>
+            </div>
+            <div class="smart-box">
+                <p><strong>T - Time-bound (期限が明確であるか):</strong> いつまでに達成するのか？</p>
+                <p><em>例：「機能利用率を上げる」→「次四半期末までに主要機能Aの利用率を15%向上させる」</em></p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-header">ワーク1：私たちのKGI・KPIを洗い出す</h2>
+            <p class="slide-subheader">～自業務に落とし込み、具体的な一歩を踏み出す～</p>
+            <p class="center-text"><strong>所要時間:</strong> 個人ワーク 15分 / グループ共有・FB 20分</p>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-header">ワーク1の目的と進め方</h2>
+            <h3><span class="icon">🎯</span>目的：</h3>
+            <ul>
+                <li>担当業務におけるKGI・KPI候補を具体的に言語化する。</li>
+                <li>SMARTの法則を意識してKPIの質を高める。</li>
+                <li>チームメンバーと共有し、多角的な視点を得る。</li>
+            </ul>
+            <h3><span class="icon">🛠️</span>進め方：</h3>
+            <ol>
+                <li><strong>個人ワーク (15分):</strong> 配布するワークシートに、自身の業務に関連するKGI・KPI候補を記入。</li>
+                <li><strong>グループワーク (20分):</strong> 3-4名のグループに分かれ、各自のKGI・KPIを共有。相互にフィードバックを行う。</li>
+            </ol>
+            <p class="note"><strong>配布物:</strong> KGI・KPI洗い出しワークシート (Excel)</p>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-header">個人ワークのポイント (15分)</h2>
+            <ol>
+                <li><strong>まずはKGIから:</strong> あなたのチーム/担当業務の「最終目標」は何ですか？ (ワークシートのKGI欄に記入)</li>
+                <li><strong>KPIを複数洗い出す:</strong> そのKGIを達成するために、どんな「道しるべ」が必要ですか？思いつくままに複数書き出してみましょう。（質より量！）</li>
+                <li><strong>SMARTチェック:</strong> 書き出したKPIをSMARTの観点で見直してみましょう。「具体的か？」「測れるか？」「達成できそうか？」「KGIと関連しているか？」「いつまでに？」</li>
+                <li><strong><span class="highlight">[*]</span>自業務への落とし込み:</strong> 普段の業務シーンを具体的に想像しながら、「このKPIが改善したら、どんな良いことがあるだろう？」「このKPIを良くするために、明日から何ができるだろう？」と考えてみましょう。</li>
+                <li><strong><span class="highlight">[*]</span>顧客セグメントも意識 (できれば):</strong> 担当している顧客セグメントによって、重視するKPIは変わりますか？</li>
+            </ol>
+            <p class="note">完璧を目指さなくてOK！まずは書き出すことが大切です。</p>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-header">グループワークのポイント (20分)</h2>
+            <p><strong>役割:</strong> 各グループでタイムキーパーを決めましょう。</p>
+            <p><strong>共有:</strong> 一人ずつ、個人ワークで作成したKGI・KPI（特に自信のあるもの、悩んでいるもの）を発表。(1人あたり発表3分、FB2分程度)</p>
+            <p><strong>フィードバックの観点 (建設的に！):</strong></p>
+            <ul>
+                <li><span class="icon">👍</span>そのKPIの良い点、共感できる点は？</li>
+                <li><span class="icon">❓</span>もっと具体的にするとしたら？ (SMARTの観点)</li>
+                <li><span class="icon">💡</span>他にこんなKPIも考えられないか？</li>
+                <li><span class="icon">🔗</span>そのKPIで本当にKGI達成に繋がるか？</li>
+                <li><span class="icon">🏃</span>そのKPIを改善するために、どんなアクションが考えられるか？</li>
+            </ul>
+            <p class="note">講師が各グループを回り、アドバイスや質問対応をします。</p>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-header">Day1の振り返り - 学びのポイント</h2>
+            <ul>
+                <li>KGIは「山の頂上」、KPIは「道しるべ」。</li>
+                <li>カスタマーマーケティングでは「先行指標」を意識することが重要。</li>
+                <li>良いKPIは「SMART」であり、具体的な「アクション」に繋がる。</li>
+                <li>自業務に落とし込み、チームで共有することでKPIは磨かれる。</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-header">Day2に向けて - さらに学びを深めるために</h2>
+            <p>本日はお疲れ様でした！Day2では、データに基づいた仮説構築とKPI改善アクションについて学びます。</p>
+            <p><strong>任意課題 (強制ではありません):</strong></p>
+            <ul>
+                <li>今日のワークで出たKPIの中で、特に重要だと思うものを1つ選んでください。</li>
+                <li>そのKPIを改善するための具体的なアイデアを3つ、簡単にメモしておいてください。</li>
+                <li>(Day2の仮説構築ワークのウォーミングアップになります)</li>
+            </ul>
+            <p><strong>質問があれば:</strong></p>
+            <p>本日の内容でご質問があれば、研修終了後やWebツールでお気軽にお寄せください。</p>
+        </div>
+
+        <div class="slide" style="background-color: #FFF6E9;">
+            <h2 class="slide-header" style="text-align:center; border-bottom:none;">ご清聴ありがとうございました</h2>
+            <p class="center-text" style="font-size:1.2em;">Day2もよろしくお願いいたします！</p>
+            </div>
+
+    </div>
+</body>
+</html>
